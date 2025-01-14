@@ -1,8 +1,26 @@
-# React + Vite
+## xKhanCoach (Landing Page)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+xKhanCoach is a platform that connects coaches with athletes to help them improve their skills and performance.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Personalized training plans
+- Live coaching sessions
+- Progress tracking
+
+## Techs Used
+
+- React
+- Vite
+- TailwindCSS
+
+## Installation
+
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev` to start the development server
+
+## Owner
+
+- [xKhanDev](https://github.com/xKhanDev)
+- [Linkden](https://www.linkedin.com/in/safeer-khan-x/)

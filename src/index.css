@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.header-font{
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.bg{
+    background-color: #fffdfd;
+    background-image: url('bg.svg');
+}
+.card-bg{
+    width: 400px;
+    height: 400px;
+    background-image: url('card-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-testimonial-bg{
+    width: 400px;
+    height: 400px;
+    background-image: url('card-pink-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.c-green{
+    background-color: #e4f5ab;
+}
+.my-cursor{
+    cursor: url('bomb.png'), auto;
+}
+.my-cursor:active {
+    cursor: url('blast.png'), auto;
+}
+
+
+/* NORMAL REGISTER FORM CSS */
+#contact-form input,label,textarea{
+    color: #fffdfd;
+    background-color: #6da7ff;
+}
