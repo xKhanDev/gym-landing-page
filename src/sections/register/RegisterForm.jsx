@@ -19,7 +19,7 @@ const RegisterForm = () => {
         <h1 className="text-xl font-bold header-font uppercase">
           Contact form
         </h1>
-        <div className="w-1/2 flex gap-4">
+        <div className="w-full lg:w-1/2 md:w-[80%] flex flex-col md:flex-row gap-8 md:gap-4">
           <div className="flex flex-col w-full h-10">
             <label
               htmlFor="firstname"
@@ -49,7 +49,7 @@ const RegisterForm = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col w-1/2 h-10">
+        <div className="flex flex-col w-full lg:w-1/2 md:w-[80%] h-10">
           <label htmlFor="email" className="z-10 text-white capitalize -mb-1">
             email
           </label>
@@ -59,7 +59,7 @@ const RegisterForm = () => {
             className="h-full p-2 border-2 border-white  focus:outline-none"
           />
         </div>
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col w-full lg:w-1/2 md:w-[80%]">
           <label htmlFor="message" className="capitalize z-10 text-white -mb-1">
             message
           </label>

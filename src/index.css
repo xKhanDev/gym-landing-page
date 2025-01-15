@@ -7,6 +7,16 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.no-scroll{
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.no-scroll::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
 .header-font{
     font-family: 'Schibsted Grotesk', sans-serif;
 }

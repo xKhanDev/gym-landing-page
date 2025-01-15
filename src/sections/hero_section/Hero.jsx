@@ -2,9 +2,14 @@ import React from "react";
 import Button from "../../components/Button";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+
+  const hanleImage = () => {
+    setImageLoaded(true);
+  };
   return (
-    <div className="w-full h-full flex justify-between items-center">
-      <div className="w-1/2 flex flex-col gap-4">
+    <div className="w-full h-full flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="w-full md:w-1/2 flex flex-col gap-4">
         <h1 className="text-5xl font-extrabold capitalize header-font">
           discover your strength with a personal coach
         </h1>
@@ -17,8 +22,18 @@ const Hero = () => {
           <Button name="register now" />
         </div>
       </div>
-      <div className="w-1/2 h-full card-bg flex justify-center items-center">
-        <img src="/man.png" alt="Bodybuilder Man" className="h-[70vh]" />
+      <div className="md:w-1/2 md:h-full card-bg flex justify-center items-center">
+        {!imageLoaded && (
+          <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
+            <div className="loader"></div>
+          </div>
+        )}
+        <img
+          src="/man.png"
+          alt="Bodybuilder Man"
+          className="h-[60vh] md:h-[40vh] lg:h-[70vh]"
+          onLoad={hanleImage}
+        />
       </div>
     </div>
   );

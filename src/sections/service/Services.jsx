@@ -24,7 +24,7 @@ const Services = () => {
       <h1 className="text-3xl font-bold header-font mb-8 uppercase">
         Services
       </h1>
-      <div className="flex justify-between items-center gap-8">
+      <div className="w-full lg:w-1/2 flex justify-between items-center gap-8 no-scroll">
         {services.map((service) => (
           <ServiceCard
             key={service.id}

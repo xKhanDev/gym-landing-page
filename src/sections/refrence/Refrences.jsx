@@ -9,7 +9,7 @@ const Refrences = () => {
       image: "https://randomuser.me/api/portraits/men/1.jpg",
       name: "John Doe",
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolores.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolores.",
     },
     {
       id: 2,
@@ -62,7 +62,7 @@ const Refrences = () => {
       <h1 className="text-3xl font-bold header-font mb-8 uppercase">
         Refrences
       </h1>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center md:w-full">
         {filteredRefrences.map((refrence, index) => (
           <RefrenceCard
             key={`${refrence.id}-${index}`}

@@ -34,7 +34,7 @@ const WhyUs = () => {
         Benefits of choosing our online coaching
       </h1>
       <div className="flex items-center gap-4">
-        <div className="flex flex-col gap-4 *:text-gray-700">
+        <div className="w-full flex flex-col gap-4 *:text-gray-700">
           {whyUsData.map((data) => (
             <WhyUsCard
               key={data.id}
@@ -44,11 +44,11 @@ const WhyUs = () => {
             />
           ))}
         </div>
-        <div className="w-[40%] h-[85vh]">
+        <div className="w-[40%] hidden md:flex md:h-[40vh] lg:h-[85vh]">
           <img
             src="sit-pose.jpeg"
             alt="Man showing his body"
-            className="rounded-xl h-full"
+            className="rounded-xl md:h-full lg:h-full"
           />
         </div>
       </div>
