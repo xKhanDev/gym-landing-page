@@ -10,7 +10,10 @@ import {
   Services,
   WhyUs,
 } from "./constant";
-import Blog from "./blogs/Blog";
+import Blog from "./pages/blogs/Blog";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/signup/SignUp";
+import NotFound from "./pages/not-found/NotFound";
 
 const MainLayout = () => {
   return (
@@ -32,6 +35,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

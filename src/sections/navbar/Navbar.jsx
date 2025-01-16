@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
-import { FaHamburger } from "react-icons/fa";
+import { RiMenu3Fill } from "react-icons/ri";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
+      {/* Desktop Menu */}
       <nav className="w-full hidden md:flex lg:flex justify-between items-center">
         <a href="/" className="w-1/2 text-xl font-medium">
           <span className="font-bold">xKhan</span>Coach
@@ -24,13 +28,14 @@ const Navbar = () => {
           <li>
             <a href="/blog">blog</a>
           </li>
-          <li className="">
+          <Link to="/register" className="">
             <Button name="start now" />
-          </li>
+          </Link>
         </ul>
       </nav>
+      {/* Mobile Menu */}
       <nav
-        className={`w-full bg-[#8bda64] p-4 rounded-xl md:hidden lg:hidden justify-between items-center ${
+        className={`w-full bg-[#8bda64] p-4 rounded-xl md:hidden lg:hidden justify-between items-center transition-all duration-300 ${
           open ? "hidden" : "flex"
         }`}
       >
@@ -41,22 +46,29 @@ const Navbar = () => {
           <span className="font-bold">xKhan</span>Coach
         </a>
         <div className="flex justify-between gap-4">
-          <Button name="start now" />
+          <Link to={"/register"}>
+            <Button name="start now" />
+          </Link>
           <button className="text-3xl" onClick={() => setOpen(!open)}>
-            <FaHamburger />
+            <RiMenu3Fill />
           </button>
         </div>
       </nav>
+      {/* Mobile Menu Open Link List */}
       {open && (
-        <div className="w-full h-full flex flex-col gap-4 bg-white">
+        <div
+          className={`w-full h-full flex flex-col gap-4 bg-white transition-all duration-300 ease-in-out ${
+            open ? "translate-y-0" : "translate-y-full opacity-0"
+          }`}
+        >
           <button
             className="text-3xl z-50 absolute right-4 top-4"
             onClick={() => setOpen(!open)}
           >
-            <FaHamburger />
+            <RxCross2 />
           </button>
           <ul
-            className={`mt-12 flex flex-col gap-2 justify-between items-center p-8 *:font-medium *:capitalize *:w-full *:py-2 *:px-4 *:text-center *:bg-gray-100 transition-all duration-300 ${
+            className={`mt-12 flex flex-col gap-2 justify-between items-center p-8 *:font-medium *:capitalize *:w-full *:py-2 *:px-4 *:text-center *:bg-gray-100 transition-all duration-300 ease-in-out ${
               !open
                 ? "opacity-0 -translate-y-[600px]"
                 : "opacity-100 translate-y-0"

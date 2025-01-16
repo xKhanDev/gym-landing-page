@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = React.useState(false);
 
-  const hanleImage = () => {
+  const handleImage = () => {
     setImageLoaded(true);
   };
   return (
@@ -22,7 +22,7 @@ const Hero = () => {
           <Button name="register now" />
         </div>
       </div>
-      <div className="md:w-1/2 md:h-full card-bg flex justify-center items-center">
+      <div className="h-1/2 md:w-1/2 md:h-full card-bg flex justify-center items-center">
         {!imageLoaded && (
           <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
             <div className="loader"></div>
@@ -31,8 +31,8 @@ const Hero = () => {
         <img
           src="/man.png"
           alt="Bodybuilder Man"
-          className="h-[60vh] md:h-[40vh] lg:h-[70vh]"
-          onLoad={hanleImage}
+          className="h-full md:h-[40vh] lg:h-[70vh]"
+          onLoad={handleImage}
         />
       </div>
     </div>

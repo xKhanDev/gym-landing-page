@@ -23,12 +23,12 @@ html, body {
 
 .bg{
     background-color: #fffdfd;
-    background-image: url('bg.svg');
+    background-image: url('/bg.svg');
 }
 .card-bg{
     width: 400px;
     height: 400px;
-    background-image: url('card-bg.svg');
+    background-image: url('/card-bg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@ html, body {
 .card-testimonial-bg{
     width: 400px;
     height: 400px;
-    background-image: url('card-pink-bg.svg');
+    background-image: url('/card-pink-bg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,10 +45,10 @@ html, body {
     background-color: #e4f5ab;
 }
 .my-cursor{
-    cursor: url('bomb.png'), auto;
+    cursor: url('/bomb.png'), auto;
 }
 .my-cursor:active {
-    cursor: url('blast.png'), auto;
+    cursor: url('/blast.png'), auto;
 }
 
 
